@@ -12,19 +12,15 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 message(STATUS "CMAKE_MODULE_PATH: " ${CMAKE_MODULE_PATH})
-
 message(STATUS "PROJECT_BINARY_DIR: " ${PROJECT_BINARY_DIR})
-message(STATUS "TBB_LIBRARY" ${TBB_LIBRARY})
-
-link_libraries(${TBB_LIBRARY})
+message(STATUS "TBB_LIBRARY: " ${TBB_LIBRARY})
 
 cmake_policy(SET CMP0074 NEW)
+link_libraries(${TBB_LIBRARY})
 
-include(${CMAKE_CURRENT_SOURCE_DIR}/Build/CMAKE/FindTBB.cmake)
+#include(${CMAKE_CURRENT_SOURCE_DIR}/Build/CMAKE/FindTBB.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/Build/CMAKE/CompileOptions.cmake)
 include(${CMAKE_CURRENT_SOURCE_DIR}/Build/CMAKE/TaskingSystemOptions.cmake)
-
-#include_directories(${TBB_INCLUDE_DIR})
 
 # Include sub-projects.
 add_subdirectory ("tensor_test_implementation")
