@@ -1,7 +1,6 @@
 #
 # Platform and architecture setup
 #
-
 # Set warnings as errors flag
 option(Tensor_WARNINGS_AS_ERRORS "Treat all warnings as errors" ON)
 if(Tensor_WARNINGS_AS_ERRORS)
@@ -11,6 +10,7 @@ if(Tensor_WARNINGS_AS_ERRORS)
         set(WARN_AS_ERROR_FLAGS "-Werror")
     endif()
 endif()
+
 
 # Get upper case system name
 string(TOUPPER ${CMAKE_SYSTEM_NAME} SYSTEM_NAME_UPPER)

@@ -1,6 +1,4 @@
-#
-# Setup tasking system build configuration
-#
+
 
 # Determine the best default option for tasking system backend
 if(NOT DEFINED Tensor_TASKING_SYSTEM)
@@ -29,7 +27,7 @@ message("TASKING_DEFAULT" : ${TASKING_DEFAULT})
 set(Tensor_TASKING_SYSTEM ${TASKING_DEFAULT} CACHE STRING
 	"Per-node thread tasking system [CPP11Thread, TBB, OpenMP, HPX, Serial]")
 	
-set_property(CACHE CUBBYFLOW_TASKING_SYSTEM PROPERTY
+set_property(CACHE Tensor_TASKING_SYSTEM PROPERTY
 	STRINGS CPP11Thread TBB OpenMP HPX Serial)
 
 # Note - Make the Tensor_TASKING_SYSTEM build option case-insensitive
