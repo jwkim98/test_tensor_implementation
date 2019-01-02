@@ -1,0 +1,6 @@
+[submodule "tbb"]
+	path = tbb
+	url = https://github.com/01org/tbb.git
+[submodule "tensor_test_implementation/tbb"]
+	path = tensor_test_implementation/tbb
+	url = https://github.com/01org/tbb.git
