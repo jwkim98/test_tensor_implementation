@@ -26,7 +26,6 @@
  */
 
 #include <random>
-
 namespace {
   std::random_device randDevice;
   std::minstd_rand engine(randDevice());
